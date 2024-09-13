@@ -1,0 +1,138 @@
+/* Main food display section */
+.food-display {
+    margin-top: 30px;
+    text-align: center; /* Center-aligning the title */
+    padding: 0 20px; /* Adding some side padding */
+}
+
+.food-display h2 {
+    font-size: max(2vw, 28px); /* Larger and more prominent font */
+    font-weight: 700; /* Increased weight for better emphasis */
+    color: #333; /* Darker color for better contrast */
+    text-transform: uppercase; /* Makes the heading all uppercase */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+/* Grid layout for food items */
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* More flexible grid with slightly larger min width */
+    gap: 30px; /* Space between items */
+    row-gap: 50px; /* Larger vertical gap for better spacing */
+    padding: 0 20px; /* Padding for better structure on smaller screens */
+    justify-items: center; /* Center items inside the grid */
+}
+
+/* Individual food item container */
+.food-item {
+    width: 100%;
+    max-width: 280px; /* Limit maximum width */
+    margin: auto;
+    background-color: #fff; /* White background for better contrast */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for a more modern feel */
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s;
+    overflow: hidden; /* Ensure content stays within the border */
+}
+
+.food-item:hover {
+    transform: scale(1.05); /* Subtle scale-up effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+/* Image container */
+.food-item-img-container {
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+}
+
+.food-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover .food-item-image {
+    transform: scale(1.1); /* Image zooms in slightly on hover */
+}
+
+/* Add to cart icon */
+.food-item-img-container .add {
+    width: 40px;
+    height: 40px; /* Made the icon perfectly circular */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4c24; /* Bright orange-red for visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
+    transition: all 0.3s ease;
+}
+
+.food-item-img-container .add:hover {
+    background-color: #ff1f00; /* Darker shade on hover */
+}
+
+/* Food item description */
+.food-item-info {
+    padding: 20px;
+    text-align: left; /* Left-align text for better readability */
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333; /* Darker font for better readability */
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+
+.food-item-desc {
+    color: #777;
+    font-size: 14px; /* Slightly larger font for readability */
+    margin-top: 8px;
+    margin-bottom: 15px; /* Spacing between the description and price */
+}
+
+.food-item-price {
+    color: #ff4c24;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for tablet sizes */
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+
+    .food-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-display h2 {
+        font-size: max(4vw, 24px); /* Adjust heading size for small screens */
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+}

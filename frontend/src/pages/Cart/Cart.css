@@ -1,0 +1,183 @@
+.cart {
+    margin: 100px 0;
+    font-family: Arial, sans-serif; /* Use a clean font for a modern look */
+}
+
+.cart hr {
+    height: 1px;
+    background-color: #E2E2E2;
+    border: none;
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: #333; /* Darker color for better readability */
+    font-size: 14px; /* Increased font size for better readability */
+    font-weight: bold; /* Make titles bold */
+    padding-bottom: 10px;
+}
+
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    margin: 15px 0; /* Increased margin for better spacing */
+    color: #555; /* Slightly lighter color for items */
+    font-size: 14px;
+}
+
+.cart-items-item img {
+    width: 70px; /* Slightly larger image */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.cart-items-item div {
+    max-width: 50px;
+    text-align: center;
+    border: 1px solid #EBEBEB;
+    padding: 10px; /* Increased padding for better appearance */
+    font-size: 14px;
+    border-radius: 4px; /* Rounded corners for input boxes */
+}
+
+.cart-items-remove-icon {
+    cursor: pointer;
+    color: #FF4C24; /* Match the button color */
+    font-weight: bold;
+    font-size: 16px; /* Larger icon */
+}
+
+.cart-bottom {
+    margin-top: 40px; /* Reduced margin for better layout */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reduced gap for a cleaner look */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 16px; /* Increased font size for totals */
+}
+
+.cart-total hr {
+    margin: 10px 0;
+    background-color: #E2E2E2; /* Match the cart hr color */
+}
+
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: #FF4C24;
+    width: 200px; /* Fixed width for consistency */
+    padding: 15px; /* Increased padding for better button appearance */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-size: 16px; /* Larger font size for readability */
+}
+
+.cart-promocode {
+    flex: 1;
+    display: none; /* Hide the promo code section */
+}
+
+.cart-promocode p {
+    color: #555;
+    font-size: 16px; /* Larger font size for better readability */
+}
+
+.cart-promocode-input {
+    display: none; /* Hide promo code input */
+}
+
+@media (max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+}
+/* Cart.css */
+.cart-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .cart {
+    position: relative; /* Ensure the cart container is positioned relatively to place the button absolutely */
+    padding-top: 70px; /* Optional: Add padding to account for the navbar height if needed */
+  }
+  
+  .cart-header {
+    position: absolute;
+    top: -100px; /* Adjust this to be just below your navbar's height */
+    left: -130px;
+    z-index: 10; /* Ensure the button is above other content */
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .cart-header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+    position: absolute;
+    top: -100px; /* Adjust according to your navbar height */
+    left: -130px; /* Adjust position as needed */
+    z-index: 10; /* Ensure the button is above other content */
+  }
+  
+  .back-button {
+    display: flex; /* Use flex to align items */
+    align-items: center; /* Center icon and text vertically */
+    background-color: #202021;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .back-button:hover {
+    background-color: #d26f18;
+  }
+  

@@ -1,0 +1,100 @@
+/* Ensure consistent dimensions and spacing */
+.food-item {
+    width: 280px;
+    height: 400px; /* Fixed height for consistent sizing */
+    margin: 15px; /* Add margin to space items */
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: transform 0.3s;
+    animation: fadeIn 1s;
+    overflow: hidden; /* Hide overflow to keep consistent size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between content */
+}
+
+.food-item:hover {
+    transform: scale(1.02);
+}
+
+/* Ensure the image container handles overflow properly */
+.food-item-img-container {
+    position: relative;
+    height: 60%; /* Ensure image container height is relative */
+}
+
+.food-item-image {
+    width: 100%;
+    height: 100%; /* Full height for image container */
+    object-fit: cover; /* Ensure image covers container without distortion */
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* Update position and size of the 'add' button */
+.food-item-img-container .add {
+    width: 35px;
+    height: 35px; /* Ensure button is a square */
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-img-container .add:hover {
+    border: 2px solid #FF4C24;
+}
+
+/* Update counter styling */
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.food-item-counter img {
+    width: 30px;
+}
+
+/* Adjust content styling */
+.food-item-info {
+    padding: 20px;
+    flex: 1; /* Allow info section to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between content */
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+
+.food-item-desc {
+    color: #676767;
+    font-size: 12px;
+    margin-bottom: 10px; /* Add margin to space from price */
+}
+
+.food-item-price {
+    color: #FF4C24;
+    font-size: 22px;
+    font-weight: 500;
+}
